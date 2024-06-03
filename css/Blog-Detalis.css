@@ -1,0 +1,17 @@
+nav li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: 350ms;
+}
+nav li:hover a::after,
+.navbar-nav .nav-link.active nav li a::after {
+  width: 80%;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

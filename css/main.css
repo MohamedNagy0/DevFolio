@@ -1,0 +1,206 @@
+html {
+    scroll-padding-top: 90px;
+}
+/* Start Header */
+/* Start Typing Animation */
+header h3 {
+    width: fit-content;
+}
+header h3::after {
+    content: "";
+    height: 70%;
+    background-color: white;
+    width: 3px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: typing 700ms infinite;
+}
+header h3 span {
+    width: 0;
+    font-size: 40px !important;
+}
+header h3 span:nth-of-type(1) {
+    animation: designer 12s steps(8) infinite;
+}
+header h3 span:nth-of-type(2) {
+    animation: developer 12s steps(9) infinite;
+}
+header h3 span:nth-of-type(3) {
+    animation: freelancer 12s steps(10) infinite;
+}
+header h3 span:nth-of-type(4) {
+    animation: photographer 12s steps(12) infinite;
+}
+@keyframes designer {
+    0%,
+    25% {
+        width: 0;
+    }
+    10%,
+    20% {
+        width: 161.14px;
+    }
+}
+@keyframes developer {
+    25%,
+    50% {
+        width: 0;
+    }
+    35%,
+    45% {
+        width: 185.67px;
+    }
+}
+@keyframes freelancer {
+    0%,
+    15%,
+    25%,
+    35%,
+    40%,
+    50%,
+    75% {
+        width: 0;
+    }
+    60%,
+    70% {
+        width: 186.69px;
+    }
+}
+@keyframes photographer {
+    0%,
+    15%,
+    25%,
+    35%,
+    40%,
+    50%,
+    75%,
+    100% {
+        width: 0;
+    }
+    85%,
+    95% {
+        width: 251.88px;
+    }
+}
+@keyframes typing {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+/* End Typing Animation */
+
+/* Start Loding  Animation*/
+.loding {
+    z-index: 9999;
+    animation: loding 500ms linear;
+    visibility: hidden;
+    opacity: 1;
+}
+@keyframes loding {
+    0% {
+        visibility: visible;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+/* End Loding Animation */
+/* End Header */
+
+/* Start Nav */
+
+.nav-underline .nav-link {
+    border-bottom: 0px;
+    position: relative;
+}
+.nav-underline .nav-link::after,
+ul li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: width 500ms;
+    background-color: #fff;
+}
+.nav-underline .nav-link.active::after,
+ul li:hover::after {
+    width: 70%;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* End Nav */
+
+/* Start services  */
+.services-card i {
+    transition: background-color 250ms, border-color 250ms, color 250ms;
+}
+.services-card:hover i {
+    background-color: #0d6efd;
+    border-color: #c2dbfe !important;
+    color: white;
+}
+/* End services  */
+
+/* Start portfolio */
+.portfolio-img img {
+    transition: scale 1.3s;
+}
+.portfolio-card:hover img {
+    scale: 1.3;
+}
+.modal:hover img {
+    scale: 1;
+}
+/* End portfolio */
+
+/* Start blog */
+.blog-section a {
+    transition: color 350ms;
+}
+.blog-section a:hover {
+    color: #0d6efd !important;
+}
+/* End blog */
+
+/* Start Contact */
+.contact-section button {
+    transition: outline 100ms, background-color 250ms;
+}
+.contact-section button:hover {
+    outline: 4px solid #c2dbfe;
+    background-color: #3393ff;
+}
+.contact-section .social-card {
+    transition: background-color 500ms, border-color 500ms;
+}
+.contact-section .social-card:hover {
+    background-color: #0d6efd;
+    border-color: #c2dbfe !important;
+}
+.contact-section .social-card i {
+    transition: color 500ms;
+}
+.contact-section .social-card:hover i {
+    color: white !important;
+}
+/* End Contact */
+
+@media screen and (min-width: 990px) {
+    .work-section,
+    .testimonial-section,
+    .contact-section {
+        background-attachment: fixed;
+    }
+}
